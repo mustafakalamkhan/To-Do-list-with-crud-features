@@ -72,7 +72,7 @@ ul li::before {
   height: 28px;
   width: 28px;
   border-radius: 50%;
-  background-image: url(images/unchecked.png); /* Updated to a proper checkbox image */
+  background-image: url(https://cdn-icons-png.flaticon.com/512/5554/5554926.png); /* Updated to a proper checkbox image */
   background-size: cover;
   background-position: center;
   top: 12px;
