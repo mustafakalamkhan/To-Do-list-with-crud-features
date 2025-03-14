@@ -8,16 +8,20 @@
 <body>
     <div class="container">
         <div class="todo-app">
-        <div style="display: flex;">
-            <h2>To-Do List</h2><img src="https://static.vecteezy.com/system/resources/previews/003/529/153/non_2x/business-to-do-list-flat-icon-modern-style-vector.jpg" alt="To-Do Icon" style="max-height: 100px;">
-        </div>
+            <div class="header">
+                <h2>To-Do List</h2>
+                <img src="https://static.vecteezy.com/system/resources/previews/003/529/153/non_2x/business-to-do-list-flat-icon-modern-style-vector.jpg" alt="To-Do Icon">
+            </div>
+
             <div class="row">
-                <input type="text" id="input-box" placeholder="Add your text">
+                <input type="text" id="input-box" placeholder="Add your task">
                 <button onclick="addTask()">Add</button> 
             </div>
+
             <ul id="list-container"></ul>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>

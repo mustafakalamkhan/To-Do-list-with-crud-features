@@ -4,6 +4,7 @@
   font-family: 'Poppins', sans-serif;
   box-sizing: border-box;  
 }
+
 .container {
     width: 100%;
     min-height: 100vh;
@@ -13,6 +14,7 @@
     justify-content: center;
     align-items: center;
 }
+
 .todo-app {
   width: 100%;
   max-width: 540px;
@@ -21,16 +23,18 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.todo-app h2 {
-  color: #002765;
+
+.header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 20px;
 }
-.todo-app h2 img {
-  width: 30px;
-  margin-left: 10px;
+
+.header img {
+  max-height: 50px;
 }
+
 .row {
   display: flex;
   align-items: center;
@@ -40,6 +44,7 @@
   padding-left: 20px;
   margin-bottom: 25px;
 }
+
 input {
   flex: 1;
   border: none;
@@ -48,6 +53,7 @@ input {
   padding: 10px;
   font-size: 14px;
 }
+
 button {
   border: none;
   outline: none;
@@ -58,6 +64,7 @@ button {
   cursor: pointer;
   border-radius: 40px;
 }
+
 ul li {
   list-style: none;
   font-size: 17px;
@@ -66,25 +73,29 @@ ul li {
   cursor: pointer;
   position: relative;
 }
+
 ul li::before {
   content: '';
   position: absolute;
   height: 28px;
   width: 28px;
   border-radius: 50%;
-  background-image: url(https://cdn-icons-png.flaticon.com/512/5554/5554926.png); /* Updated to a proper checkbox image */
+  background-image: url(https://cdn-icons-png.flaticon.com/512/5554/5554926.png);
   background-size: cover;
   background-position: center;
   top: 12px;
   left: 8px;
 }
+
 ul li.checked {
   color: #555;
   text-decoration: line-through;
 }
+
 ul li.checked::before {
-  background-image: url(images/checked.png); /* Updated for checked state */
+  background-image: url(https://cdn-icons-png.flaticon.com/512/190/190411.png);
 }
+
 ul li span {
   position: absolute;
   right: 0;
@@ -97,6 +108,7 @@ ul li span {
   text-align: center;
   cursor: pointer;
 }
+
 ul li span:hover {
   background: #edeef0;
   border-radius: 50%;
