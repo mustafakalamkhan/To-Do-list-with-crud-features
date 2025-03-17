@@ -1,26 +1,35 @@
 const inputBox = document.getElementById("input-box");
-const listContainer = document.getElementById("list-container"); 
+const listContainer = document.getElementById("list-container");
 
 function addTask() {
-    if (inputBox.value.trim() === '') {  
+    let taskText = inputBox.value.trim(); // Trim to remove extra spaces
+
+    if (taskText === '') {  
         alert("You must write something!");
-    } else {
-        let li = document.createElement("li");
-        li.textContent = inputBox.value;
+        return;
+    } 
 
-        let span = document.createElement("span");
-        span.innerHTML = "\u00d7"; // Close button (×)
-        span.classList.add("delete-btn");
+    // Create a new task (li)
+    let li = document.createElement("li");
+    li.textContent = taskText;
 
-        li.appendChild(span);
-        listContainer.appendChild(li);
-        
-        inputBox.value = "";
-        saveData();
-    }
+    // Create a delete button (×)
+    let span = document.createElement("span");
+    span.innerHTML = "\u00d7";
+    span.classList.add("delete-btn");
+    li.appendChild(span);
+
+    // Add to list
+    listContainer.appendChild(li);
+    
+    // Clear input box after adding task
+    inputBox.value = "";
+
+    // Save to localStorage
+    saveData();
 }
 
-// Event listener for checking & deleting tasks
+// Check / Delete task event listener
 listContainer.addEventListener("click", function(e) {
     if (e.target.tagName === "LI") {
         e.target.classList.toggle("checked");
@@ -37,19 +46,7 @@ function saveData() {
 }
 
 // Load saved tasks from localStorage
-function showTask() {
-    let savedTasks = localStorage.getItem("tasks");
-    if (savedTasks) {
-        listContainer.innerHTML = savedTasks;
-
-        // Reattach event listeners to saved tasks
-        let items = listContainer.getElementsByTagName("li");
-        for (let i = 0; i < items.length; i++) {
-            let span = document.createElement("span");
-            span.innerHTML = "\u00d7"; // Close button (×)
-            span.classList.add("delete-btn");
-            items[i].appendChild(span);
-        }
-    }
+function showTasks() {
+    listContainer.innerHTML = localStorage.getItem("tasks") || "";
 }
-showTask();
+showTasks();
