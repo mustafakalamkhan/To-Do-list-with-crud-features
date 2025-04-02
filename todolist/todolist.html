@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>To-Do List App - Easy Tutorials</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="todo-app"  style="
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        justify-items: center;
+        background-image: url(https://static.vecteezy.com/system/resources/previews/025/896/280/large_2x/to-do-list-seamless-pattern-background-business-flat-illustration-checklist-task-list-symbol-pattern-vector.jpg);">
+            <div style="display: inline-flex;">
+            <h2>To-Do List</h2>
+            <img src="https://static.vecteezy.com/system/resources/previews/003/529/153/non_2x/business-to-do-list-flat-icon-modern-style-vector.jpg" alt="To-Do Icon" 
+                  style=" max-height: 75px;">
+            </div>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Add your text">
+                <button onclick="addTask()">Add</button>
+            </div>
+            <ul id="list-container">
+                <li class="checked">Task 1</li>
+                <li>Task 2</li>
+                <li>Task 3</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
