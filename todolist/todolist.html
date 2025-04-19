@@ -4,7 +4,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>To-Do List App - Easy Tutorials</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="todolist.css">
 </head>
 
 <body>
@@ -24,9 +24,12 @@
                     alt="To-Do Icon" style=" max-height: 75px;">
             </div>
             <div class="row">
-                <input type="text" id="input-box" placeholder="Add your text">
+                <input type="text" id="input-box" placeholder="Add your text" value="test">
+                <input type="date" id="due-date" placeholder="Due-date">
+                <label for="reminder-time">Reminder Time:</label>
+                <input type="time" id="reminder-time">
                 <button onclick="addTask()">Add</button>
-            </div>
+            </div>            
             <ul id="list-container">
                 <li class="checked">Task 1</li>
                 <li>Task 2</li>
@@ -35,7 +38,7 @@
         </div>
     </div>
 
-    <script src="todolist.js"></script>
+    html <script src="todolist.js"></script>
 </body>
 
 </html>

@@ -101,3 +101,24 @@ ul li span:hover{
     background: #edeef0;
 
 }
+ul li {
+    line-height: 1.6;
+}
+ul li strong {
+    display: block;
+    font-size: 18px;
+    color: #222;
+}
+ul li br + span, 
+ul li br + br + span {
+    display: block;
+    font-size: 14px;
+    color: #444;
+    margin-top: 4px;
+}
+ul li::after {
+    font-size: 13px;
+    display: block;
+    margin-top: 3px;
+    color: #777;
+}    
